@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@cosmjs/crypto": "^0.32.4",
+    "@cosmjs/proto-signing": "^0.32.4",
+    "@cosmjs/stargate": "^0.32.4"
+  }
+}
