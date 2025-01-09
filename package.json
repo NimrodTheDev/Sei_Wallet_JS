@@ -2,6 +2,8 @@
   "dependencies": {
     "@cosmjs/crypto": "^0.32.4",
     "@cosmjs/proto-signing": "^0.32.4",
-    "@cosmjs/stargate": "^0.32.4"
+    "@cosmjs/stargate": "^0.32.4",
+    "dotenv": "^16.4.7",
+    "telegraf": "^4.16.3"
   }
 }
