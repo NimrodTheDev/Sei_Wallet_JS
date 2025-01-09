@@ -1,4 +1,10 @@
 {
+  "name": "my-app",
+  "version": "1.0.0",
+  "main": "entry.cjs",
+  "scripts": {
+    "start": "node entry.cjs"
+  },
   "dependencies": {
     "@cosmjs/crypto": "^0.32.4",
     "@cosmjs/proto-signing": "^0.32.4",
