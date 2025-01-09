@@ -57,7 +57,7 @@ class Prices {
 }
 
 // Fetch Sei info
-export async function getSeiInfo() {
+async function getSeiInfo() {
   try {
     const url = 'https://api.coingecko.com/api/v3/coins/sei-network';
     const response = await axios.get(url);
@@ -77,7 +77,7 @@ export async function getSeiInfo() {
 }
 
 // Fetch coin data by substring
-export async function getCoinData(coinSubstring) {
+async function getCoinData(coinSubstring) {
   try {
     const url = 'https://api.coingecko.com/api/v3/coins/list';
     const response = await axios.get(url);
@@ -114,3 +114,6 @@ export async function getCoinData(coinSubstring) {
     console.error('Error:', error.message);
   }
 })();
+
+
+module.exports = {getCoinData, getSeiInfo}

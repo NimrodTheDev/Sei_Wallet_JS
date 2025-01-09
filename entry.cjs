@@ -1,6 +1,6 @@
 const { Telegraf, Markup, session, Scenes, } = require('telegraf');
 const { help, aboutSei, community, guide, create_wallet, buy_sei } = require('./responses.cjs');
-const { sendSei, getBalance } = require('./send');
+const { sendSei, getBalance } = require('./send.cjs');
 require('dotenv').config();
 
 // Command Descriptions

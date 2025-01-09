@@ -10,7 +10,7 @@ const Coin_Data = {
 };
 
 // About Sei function
-export async function aboutSei() {
+async function aboutSei() {
   let about = '';
   try {
     const response = await Coin_Data.getSeiInfo();
@@ -49,7 +49,7 @@ It's a perfect choice for anyone interested in blockchain trading innovations.\n
 }
 
 // Community function
-export async function community() {
+async function community() {
   let communityInfo = '';
   try {
     const response = await Coin_Data.getSeiInfo();
@@ -122,7 +122,7 @@ there's a place for you here!
 }
 
 // Help function
-export function help() {
+function help() {
   return `
 🌟 Welcome to @TheSeiNewbieBot! 🌟
 Hi there! I’m here to guide you through everything Sei-related. Whether you’re a beginner or looking to dive deeper, I’ve got your back! 🚀
@@ -137,7 +137,7 @@ Tap the commands below to discover all the features and tools I offer! 🎉
 }
 
 // Guide function
-export function guide() {
+function guide() {
   return `
 Welcome to the SEI Wallet Guide Bot! 🤖✨
 Here’s what I can help you with:
@@ -157,13 +157,12 @@ Tap a button below to dive into any guide and unlock the knowledge you need! �
 ☝️ Pro Tip: Always ensure your recovery phrase and private keys are stored securely, away from prying eyes! 👀🔒
 `;
 }
-
-export const create_wallet=async()=>{
+const create_wallet=async()=>{
     let wallet = await createWallet()
     return `Sei address: ${wallet.address}\nRecovery  phrase: ${wallet.mnemonic}`
 }
 
-export const buy_sei =()=>{
+const buy_sei =()=>{
   return`Here’s a simple guide to help you get started:\n\n
 
 1. Choose a Cryptocurrency Exchange\n
@@ -184,3 +183,6 @@ On a CEX, go to the trading section, select SEI, and place a market or limit ord
 For long-term storage, consider transferring SEI to a secure, non-custodial wallet like Keplr or hardware wallets like Ledger for added security.\n
 N/B: Your deposit memo/tag is as ant as address so not forget them when making deposits.`
 }
+
+
+module.exports = {buy_sei, create_wallet, guide, help,community, aboutSei}

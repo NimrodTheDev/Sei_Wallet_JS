@@ -1,7 +1,7 @@
 const { SigningStargateClient,  GasPrice, StargateClient } = require('@cosmjs/stargate');
 const { DirectSecp256k1HdWallet } = require('@cosmjs/proto-signing');
 
-export async function sendSei(mnemonic, receiver, coin_amount) {
+async function sendSei(mnemonic, receiver, coin_amount) {
   const rpcEndpoint = "https://rpc.sei-apis.com/"; // Replace with the actual RPC endpoint.
   const wallet = await DirectSecp256k1HdWallet.fromMnemonic(
     mnemonic,
@@ -27,7 +27,7 @@ export async function sendSei(mnemonic, receiver, coin_amount) {
   return(result);
 }
 
-export async function getBalance(address){
+async function getBalance(address){
   const rpcEndpoint = "https://rpc.sei-apis.com/"; 
   
   try {
@@ -53,3 +53,5 @@ export async function getBalance(address){
   
 }
 // main().catch(console.error);
+
+module.exports = {getBalance, sendSei}
