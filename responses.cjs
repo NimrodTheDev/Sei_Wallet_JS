@@ -1,4 +1,4 @@
-import { createWallet } from './index.cjs';
+const { createWallet } = require('./index.cjs');
 
 const axios = require('axios');
 const { getSeiInfo, getCoinData } = require('./coindata.cjs');
@@ -182,5 +182,5 @@ On a CEX, go to the trading section, select SEI, and place a market or limit ord
 
 5. Store Your SEI Safely\n
 For long-term storage, consider transferring SEI to a secure, non-custodial wallet like Keplr or hardware wallets like Ledger for added security.\n
-N/B: Your deposit memo/tag is as important as address so not forget them when making deposits.`
+N/B: Your deposit memo/tag is as ant as address so not forget them when making deposits.`
 }
