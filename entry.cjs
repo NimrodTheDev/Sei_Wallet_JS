@@ -339,6 +339,6 @@ app.get('/', (req, res) => res.send('Bot is running!'));
 
 // Start Express Server
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT} / url${process.env.WEBHOOK_URL}/bot${process.env.BOT_TOKEN} `);
     bot.telegram.setWebhook(`${process.env.WEBHOOK_URL}/bot${process.env.BOT_TOKEN}`);
 });
